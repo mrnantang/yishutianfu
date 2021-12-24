@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="css/public.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+    <title>艺述天府（Telling Sichuan by Arts）</title>
+    <style>
+        .box {
+            width: 14.4rem;
+            margin: 0 auto;
+            display: flex;
+
+        }
+
+        body {
+            width: 100%;
+            margin: auto;
+            overflow: auto;
+            overflow-x: hidden;
+            background-color: #27365f;
+            /*border: 1px solid white;*/
+
+        }
+
+        .header {
+            width: 100%;
+            height: 1.99rem;
+            /*border: 1px solid white;*/
+            display: flex;
+        }
+
+
+        .logo>img {
+            position: absolute;
+            float: left;
+            width: 2.31rem;
+
+        }
+
+        .left-bot {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 2.92rem;
+        }
+
+        .right-bot {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 3.71rem;
+        }
+
+        .logo_text {
+            width: 9.55rem;
+            height: 1.33rem;
+            /*border: 1px solid white;*/
+            align-self: flex-end;
+            background-image: url("img/index/logo-text.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .btn {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 1.5rem;
+            margin-top: 0;
+            /*margin-left: 11.5rem;*/
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            width: 1.442rem;
+            font-size: 0.2rem;
+            height: 0.367rem;
+            line-height: 0.367rem;
+
+        }
+
+        .btn1 {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 1.5rem;
+            margin-top: 0.49rem;
+            /*margin-left: 11.5rem;*/
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            width: 1.442rem;
+            font-size: 0.2rem;
+            height: 0.367rem;
+            line-height: 0.367rem;
+
+        }
+
+        .big {
+            width: 100%;
+
+        }
+
+        .null {
+            width: 100%;
+            /*height: 58px;*/
+            height: 0.63rem;
+            /*border: 1px solid white;*/
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            position: relative;
+            /*height: 668px;*/
+            /*border: 1px solid white;*/
+        }
+        .left {
+            margin-top: 0.25rem;
+            margin-left: 2.5rem;
+            width: 6.69rem;
+            display: flex;
+
+        }
+
+        .left>a {
+            width: 3.20rem;
+            height: 2.11rem;
+            /*border: 1px solid white;*/
+        }
+
+        .left>a>img {
+            width: 3.20rem;
+            height: 2.11rem;
+            /*border: 1px solid white;*/
+        }
+
+        .left-m {
+            margin-top: 1.8rem;
+            margin-left: -0.5rem;
+        }
+
+        .left-b {
+            margin-top: 3.6rem;
+            margin-left: -0.5rem;
+        }
+
+        .text-content {
+            margin-left: 0.53rem;
+            width: 4.56rem;
+            height: 2.71rem;
+            line-height: 0.36rem;
+            font-size: 0.18rem;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: #FFFFFF;
+
+            /*border: 1px solid greenyellow;*/
+            display: flex;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+        }
+
+        .English {
+            display: none;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+
+        .chinese {
+            display: block;
+            text-align: justify;
+            text-justify: inter-ideograph;
+        }
+
+        .container {
+            border: 1px solid white
+        }
+
+        .bot {
+            width: 100%;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* margin: 0 auto; */
+            font-size: 0.18rem;
+            color: white;
+            position: relative;
+            bottom: 0;
+            /*border: 1px solid beige;*/
+        }
+
+        .bot>div {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .down-text {
+            overflow-y: scroll;
+            height: 50vh;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?4c68c2ba6032aae30bd1001005bbb23b";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+</head>
+
+<body id="bodyId" style="display: none;">
+    <!--<div class="boxes">-->
+    <div class="header">
+        <div class="logo">
+            <img src="img/index/left-logo.png" width="100%" />
+        </div>
+        <div class="box">
+
+            <div class="logo_text">
+                <div class="btn clickEffict" onclick="change()"><span id="ch_text" style="color: #f0a944;">中文</span>
+                    /<span id="en_text"> English</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="null"></div>
+    <div class="box">
+        <div class="big">
+
+            <div class="content">
+                <div class="left">
+                    <a href="yunzhanyan/index.html"><img class="left-bg clickEffict" src="img/index/wo.png" alt=""></a>
+                    <a class="left-m clickEffict" href="huihua.html"><img src="img/index/qu.png" alt=""></a>
+                    <a class="left-b clickEffict" href="shougong.html"><img src="img/index/zhong.png" alt=""></a>
+                </div>
+
+            </div>
+            <div class="chinese bot">
+                <div>
+                    主办：四川新华出版发行集团<br>
+                    承办：四川新华乐知教育科技有限公司<br>
+                </div>
+            </div>
+            <div class="English bot">
+                <div>
+                    Sponsor:Sichuan Xinhua Publishing and Distribution Group Co., Ltd.、Burggymnasium Essen<br>
+                    Organizer:Sichuan Xinhua Lezhi Educational Technology Co.,Ltd.<br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="opacityBottom" id="download" style="display: none">
+        <div class="download1">
+            <div class="fanhui1"><img class="close1" src="img/res/fanhui1.png" alt=""></div>
+            <div class="textbox">
+                <div class="down-text">
+                    <span>Have you ever heard of the Spring Festival? The Spring Festival is the most important traditional festival in China, symbolizing "reunion" "gratitude" and "hope". For Chinese people, instead of New Year’s day, the Spring Festival marks the beginning of a New Year. The year 2021 is the Year of the OX on Chinese lunar calendar. As a symbol of diligence and honesty, the OX also has auspicious connotations. In Chinese language, there are many OX-related idioms, such as Niu Qi Cong Tian , Niu Yun Heng Tong and Niu Jing Shi Zu , which describe the spirit of entrepreneurship, the everlasting fortune and the great power respectively. On the arrival of the Chinese Lunar New Year in 2021, hand in hand, Sichuan Xinhua Publishing and Distribution Group and Burggymnasium Essen bring an online Spring Festival banquet for overseas Chinese people and friends all over the world. The ruthless epidemic cannot prevent us from enhancing the friendship with each other, as we can still get together in the "cloud" to share the joy, peace and warmth of the New Year.</span>
+                    <br><br>
+                    <span
+                        style="margin-left: 2em;">小伙伴们听说过春节吗？春节是中国最重要的传统节日，代表着“团圆”“感恩”与“希望”。对中国人来说，过了春节才算正式进入新的一年。2021年时逢农历牛年。牛作为勤劳憨厚的象征，还有着吉祥的寓意，在中文里许多跟牛有关的成语都有着美好的内涵，如：牛气冲天、牛运亨通、牛劲十足！时值2021中国农历新年到来之际，四川新华出版发行集团携手德国埃森市伯乐高级文理中学为海外友人、华人华侨带来一场线上春节联欢。疫情无法阻隔我们彼此的情谊，我们仍能在“云端”相聚，共享新春佳节的欢乐、祥和与温暖。</span>
+                    <br><br>
+                    <span
+                        style="margin-left: 2em;">特别鸣谢：Pandaful熊猫社区、四川文化传播有限公司、四川辞书出版社有限公司</span><br><br>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img src="img/index/left-bot.png" class="left-bot" alt="">
+    </div>
+    <div>
+        <img src="img/index/right-bot.png" class="right-bot" alt="">
+    </div>
+    <!--</div>-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+
+        function change() {
+            var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+            console.log(n);
+            if (n == "china") {
+                localStorage.setItem("language", 'english');
+                get();
+                console.log("English");
+            } else {
+                localStorage.setItem("language", 'china');
+                get();
+            }
+        }
+
+
+
+        function get() {
+            var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+            if (n == 'english') {
+                $(".English").css({ "display": "block" });
+                $(".chinese").css({ "display": "none" });
+                $("#en_text").css({ "color": "#f0a944" });
+                $("#ch_text").css({ "color": "white" });
+            } else {
+                $(".English").css({ "display": "none" });
+                $(".chinese").css({ "display": "block" });
+                $("#en_text").css({ "color": "white" });
+                $("#ch_text").css({ "color": "#f0a944" });
+            }
+        }
+
+        get();
+        $(window).resize(function () {
+            setHtmlFontSize();
+        });
+
+        $(function () {
+            setHtmlFontSize();
+        });
+    </script>
+</body>
+
+</html>

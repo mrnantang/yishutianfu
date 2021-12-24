@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>新华中心成果展</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="css/public.css" rel="stylesheet">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+
+    <style>
+        .box {
+            width: 14.4rem;
+            margin: 0 auto;
+            display: flex;
+            margin-top: 0.44rem;
+            /*align-items: center;*/
+            /*border: 1px solid red;*/
+        }
+
+        body {
+            width: 100%;
+            margin: auto;
+            overflow: auto;
+            overflow-x: hidden;
+            background-color: white;
+        }
+
+        .header {
+            width: 100%;
+            height: 1.99rem;
+            background-color: #398563;
+            display: flex;
+        }
+
+        .logo>img {
+            position: absolute;
+            float: left;
+            width: 1.5rem;
+            margin-top: 0.3rem;
+        }
+
+        .right-bot {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 2.92rem;
+        }
+
+        .logo_text {
+            width: 5.31rem;
+            height: 1.34rem;
+            /* background-image: url("img/res/logo-text.png"); */
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .right-btn {
+            width: 1.442rem;
+            height: 1.19rem;
+            margin-left: 2.88rem;
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid darkred;*/
+            position: absolute;
+            right: 1.5rem;
+
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 0.24rem;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            width: 1.442rem;
+            font-size: 0.2rem;
+            height: 0.367rem;
+            line-height: 0.367rem;
+            align-self: flex-end;
+
+        }
+
+        .back {
+            width: 0.77rem;
+            height: 0.59rem;
+            margin-left: 0.67rem;
+            cursor: pointer;
+            /*border: 1px solid white;*/
+        }
+
+        .big {
+            width: 100%;
+            /*height: 680.3px;*/
+            /*border: 1px solid red;*/
+
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            /*border: 1px solid white;*/
+        }
+
+        .left {
+            /*width: 4.82rem;*/
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid darkred;*/
+        }
+
+        .imgdiv {
+            width: 3.7rem;
+            margin-left: 0.7rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid white;*/
+        }
+
+        .unchoose {
+            cursor: pointer;
+            width: 3.7rem;
+            height: 0.92rem;
+            border-bottom: solid 1px #B5B5B5;
+            margin-bottom: 0.17rem;
+            display: flex;
+            /*justify-content: center;*/
+            align-items: center;
+        }
+
+        .unchoose>div {
+            color: #26355F;
+            font-size: 0.28rem;
+            text-align: left;
+            /*line-height: 0.27rem;*/
+
+        }
+
+        .clickstyle {
+            cursor: pointer;
+            color: #F5A418;
+
+        }
+
+        .clickstyle>div {
+            color: #F5A418;
+
+        }
+
+        .itemBox {
+            width: 100%;
+            /*height: 307.1px;*/
+            overflow-y: hidden;
+        }
+
+        .middle {
+            /*margin: 0px auto;*/
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid black;*/
+        }
+
+        .btn-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.56rem;
+            font-family: Source Han Serif CN;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .middle>img {
+            /*border: 1px solid red;*/
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid red;*/
+            width: 10.00rem;
+            /*width: 55.5%;*/
+            /*margin-left: 4.4%;*/
+            margin: 0 auto;
+
+        }
+
+        .big_text {
+            overflow-y: scroll;
+            padding-top: 0.35rem;
+            /*border: 1px solid red;*/
+            text-align: justify;
+            display: flex;
+            /*justify-content: center;*/
+        }
+
+        .title {
+            width: 100%;
+            border-bottom: solid 1px #B5B5B5;
+            height: 0.55rem;
+            font-size: 0.28rem;
+            font-family: Source Han Sans CN;
+            font-weight: 800;
+            color: #1C6984;
+            line-height: 0.44;
+        }
+
+        .f-title {
+            font-size: 0.32rem;
+            font-family: Source Han Sans CN;
+            font-weight: 800;
+            color: black;
+            line-height: 0.74rem;
+            margin-top: 0.26rem;
+        }
+
+        .detail {
+            line-height: 0.53rem;
+            text-align: justify;
+        }
+
+        .detailEnglish {
+            line-height: 0.53rem;
+            text-align: justify;
+        }
+
+        .text-content {
+            text-align: left;
+            width: 10rem;
+            font-size: 0.22rem;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: black;
+            line-height: 0.56rem;
+            /*border: 1px solid blue;*/
+
+        }
+
+        .English {
+            display: none;
+        }
+
+        .chinese {
+            display: block;
+        }
+
+        .close {
+            position: fixed;
+            z-index: 10001;
+            top: 10px;
+            right: 10px;
+            /*margin-right: 10px;*/
+            /*float: right;*/
+        }
+
+        .imgItem {
+            /*width: 500px;*/
+            width: 6.67rem;
+        }
+
+        .videoItem {
+            /*width: 500px;*/
+            width: 6.67rem;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .zong {
+            width: 208px;
+            height: 312px;
+        }
+
+        .heng {
+            width: 220px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--<div class="boxes">-->
+    <div class="header">
+        <div class="logo">
+            <img src="img/index/left-logo.png" width="100%" style="margin-left: 0.5rem;" />&nbsp;
+            <img src="img/index/left-logo-02.png" width="100%" style="margin-left: 2rem;" />&nbsp;
+        </div>
+        <div class="box" style="">
+
+            <div class="logo_text">
+
+            </div>
+            <div class="right-btn">
+
+                <img class="back clickEffict" onclick="back()" src="img/back.png" alt="">
+                <div class="btn clickEffict" onclick="change()">
+                    <span id="ch_text" style="color:#f0a944;">中文</span> /<span id="en_text">
+                        English
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="big">
+
+            <div class="content">
+
+                <div class="right">
+
+                    <!--<div class="item-box">-->
+
+                    <div class="big_text scrollbar">
+                        <div class="text-content" id="detail">
+                            <div class="English" id="English">
+                                <div class="title" id="E-title">Exhibition in Xinhua Center
+                                </div>
+                                <div class="f-title" id="Ef-title">
+                                </div>
+                                <div class="detailEnglish" id="EnglishNote">
+                                    <div style='width:100%; text-align:center;'></div>
+                                    <span></span><br>
+                                    <table>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_8012.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8012.JPG" class="zong"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8025.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8025.JPG" class="zong"></a></td>
+                                            <td></td>
+                                            <td><a href='img/zhanlan/_MG_8025.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8025.JPG" class="zong"></a></td>
+                                            <td></td>
+                                            <td><a href='img/zhanlan/_MG_8025.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8025.JPG" class="zong"></a></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <div style='width:100%; text-align:center;'></div>
+                                    <span></span><br>
+                                    <table>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_7989.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7989.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_7992.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7992.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_7993.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7993.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_7995.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7995.JPG" class="heng"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_7996.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7996.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8006.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8006.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8014.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8014.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8018.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8018.JPG" class="heng"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_8019.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8019.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8032.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8032.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8035.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8035.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8036.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8036.JPG" class="heng"></a></td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+
+                            </div>
+                            <div class="chinese" id="chinese">
+                                <div class="title" id="title">新华中心成果展</div>
+                                <div class="f-title" id="f-title"></div>
+                                <div class="detail" id="note">
+                                    <div style='width:100%; text-align:center;'></div>
+                                    <span></span><br>
+                                    <table>
+
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_8012.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8012.JPG" class="zong"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8025.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8025.JPG" class="zong"></a></td>
+                                            <td></td>
+                                            <td><a href='img/zhanlan/_MG_8025.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8025.JPG" class="zong"></a></td>
+                                            <td></td>
+                                            <td><a href='img/zhanlan/_MG_8025.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8025.JPG" class="zong"></a></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </table>
+                                    <div style='width:100%; text-align:center;'></div>
+                                    <span></span><br>
+                                    <table>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_7989.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7989.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_7992.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7992.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_7993.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7993.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_7995.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7995.JPG" class="heng"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_7996.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_7996.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8006.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8006.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8014.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8014.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8018.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8018.JPG" class="heng"></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href='img/zhanlan/_MG_8019.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8019.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8032.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8032.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8035.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8035.JPG" class="heng"></a></td>
+                                            <td><a href='img/zhanlan/_MG_8036.JPG' target='_blank'><img
+                                                        src="img/zhanlan/_MG_8036.JPG" class="heng"></a></td>
+                                        </tr>
+                                    </table>
+
+                                    <br>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img src="img/res/xiongmao.png" class="right-bot" alt="">
+    </div>
+    <!--</div>-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+
+        function change() {
+            var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+            console.log(n);
+            if (n == "china") {
+                localStorage.setItem("language", 'english');
+                get();
+                console.log("English")
+
+            } else {
+                localStorage.setItem("language", 'china');
+                get();
+            }
+        }
+
+
+        function get() {
+            var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+            console.log(localStorage.getItem("language"));
+            if (n == 'english') {
+                $(".English").css({ "display": "block" });
+                $(".chinese").css({ "display": "none" });
+                $("#en_text").css({ "color": "#f0a944" });
+                $("#ch_text").css({ "color": "white" });
+                console.log("English")
+
+            } else {
+
+                $(".English").css({ "display": "none" });
+                $(".chinese").css({ "display": "block" });
+                $("#en_text").css({ "color": "white" });
+                $("#ch_text").css({ "color": "#f0a944" });
+                console.log("chinese")
+            }
+
+        }
+
+        get();
+        $(window).resize(function () {
+            setHtmlFontSize();
+        });
+
+        $(function () {
+            setHtmlFontSize();
+        });
+
+
+    </script>
+</body>
+
+</html>

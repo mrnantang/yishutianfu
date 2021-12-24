@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <title>中文泰有趣</title>
+    <link rel="stylesheet" href="static/css/yunzhan.css">
+    <script>
+        function isIE() {
+            if (!!window.ActiveXObject || "ActiveXObject" in window) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="videoInput" style="opacity: 0;z-index: -10">
+    <div id="page" class="load">
+
+        <div class="loading">
+            <div class="bar"></div>
+            <div class="barW" id="bar"></div>
+        </div>
+    </div>
+    <div class="coverBox1">
+        <div class="coverBox">
+            <img src="static/img/title.png" alt="">
+        </div>
+    </div>
+    <div class="video">
+        <div class="closeVideo effect" onclick="SYun.closeVideo()"><img src="static/img/close.png" />
+        </div>
+        <video src="" controls autoplay id="video" class="videoBox"></video>
+        <div class="upVideo">
+            <table class="videoTable">
+                <tr>
+                    <td id="videoTitle" style="text-align: left; font-size: 24px;">
+
+                    </td>
+                    <td style="text-align: right;">
+                        <img src='static/img/share.png' class="" onclick="SYun.shareVideo()" id="share"
+                            style='width: 24px; height: 24px;'>&nbsp;
+                        <span class="shareT" id="shareT"></span>
+                        <img src='static/img/hand_clicked.png' onclick="SYun.upVideo()" id="full_hand"
+                            style='width: 24px; height: 24px;'>&nbsp;<span id='full_num'
+                            style="font-size: 20px; margin-right: 20px;">0</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;" id="full_desc">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="box">
+        <div class="boxes " id="boxes" onmousedown="SYun.down(event)" onmouseup="SYun.release(event)"
+            onmousemove="SYun.mouseMove(event)" onmouseout="SYun.release(event)">
+
+        </div>
+        <div class="leftBack">
+            <div class="buttonDiv">
+                <div class="back effect" onclick="SYun.backHome()"><img src="static/img/back.png"></div>
+                <div class="back back1 effect" onclick="SYun.top()"><img src="static/img/left.png"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/yunzhan1.js"></script>
+    <script type="text/javascript">
+        let SYun = new Yu();
+        // SYun.getData();//加载数据初始化中
+        window.onload = function () {
+            SYun.init(); //加载数据初始化中
+            console.log("dat " + SYun.val().yunData);
+        };
+
+        function openUpload() {
+            location.href = "../upload.html"
+        }
+
+        function get() {
+            var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+            console.log(localStorage.getItem("language"));
+            if (n == 'english') {
+                $(".English").css({ "display": "block" });
+                $(".chinese").css({ "display": "none" });
+                $("#en_text").css({ "color": "#f0a944" });
+                $("#ch_text").css({ "color": "white" });
+                console.log("English");
+            } else {
+                $(".English").css({ "display": "none" });
+                $(".chinese").css({ "display": "block" });
+                $("#en_text").css({ "color": "white" });
+                $("#ch_text").css({ "color": "#f0a944" });
+                console.log("chinese");
+            }
+        }
+        get();
+    </script>
+</body>
+
+</html>

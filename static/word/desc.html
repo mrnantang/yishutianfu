@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			img {
+            width: 100%;
+            height: 100%;
+        }
+		.videoItem {
+			width: 100%;
+		}
+		      .miaoshu {
+		            font-size: 14px;
+		            line-height: 24px;
+		            color: #595959;
+		        }
+    </style>
+	</head>
+
+	<body>
+
+<p style="text-align:center">
+    <img width="297" height="742" src="../img/3.jpg" alt="熊猫"/>
+</p>
+<p style="text-align:center">
+    <span style="font-family:宋体">可爱的熊猫</span> Cute Pandas
+</p>
+<p style="text-align:center">
+    <img width="278" height="695" src="../img/caishen.jpg" alt="财神"/>
+</p>
+<p style="text-align:center">
+    <span style="font-family:宋体">喜庆的财神</span> Festive God of Wealth
+</p>
+<p style="text-align:center">
+    &nbsp;
+</p>
+<p style="text-align:center">
+    <img width="317" height="792" src="../img/menshen.jpg" alt="门神"/>
+</p>
+<p style="text-align:center">
+    <span style="font-family:宋体">威武的门神</span> Powerful God of Door
+</p>
+<p>
+    <br/>
+</p>
+		
+		<script type="text/javascript" charset="utf-8">
+			function clicked(type, src) {
+				var data = {
+					type: type,
+					src: src
+
+				};
+				window.parent.postMessage({
+					data: data
+				}, '*');
+			}
+		</script>
+	</body>
+
+</html>

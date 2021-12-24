@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<style>
+		body {
+			text-align: justify;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+
+		span {
+			style='margin-left: 2em; line-height: 38px; text-align: justify; justify-content: center; align-items: center;'
+		}
+
+		.videoItem {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+    <video width="800" height="200" src="http://192.168.3.227/xueshengduan/1.mp4" controls="">
+    
+    </video>
+
+	<script type="text/javascript" charset="utf-8">
+		function clicked(type, src) {
+			var data = {
+				type: type,
+				src: src
+
+			};
+			window.parent.postMessage({
+				data: data
+			}, '*');
+		}
+	</script>
+</body>
+
+</html>

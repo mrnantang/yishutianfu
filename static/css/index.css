@@ -1,0 +1,102 @@
+.middle-box {
+	width: 88.8vw;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: absolute;
+
+
+}
+
+.box-content {
+	width: 100%;
+	height: 72%;
+
+}
+
+.box-img {
+	position: absolute;
+}
+
+.title-botoom {
+	position: absolute;
+	bottom: 0;
+	width: 88.8vw;
+	height: 13.3%;
+	text-align: left;
+	text-align: left;
+	
+
+}
+
+.titleBox {
+	width: 100%;
+	height: 20%;
+}
+
+.title1 {
+	color: #FFA400;
+	letter-spacing: 70;
+	font-size: 4vw;
+	font-family: FZQingKeBenYueSongS-R-GB;
+	font-weight: 400;
+	margin-left: 10vw;
+}
+
+.title2 {
+
+	font-size: 4vw;
+	font-family: Microsoft YaHei;
+	font-weight: 400;
+	color: #FFFFFF;
+	opacity: 0.8;
+	text-align: left;
+	margin-top: 1%;
+	margin-left: 6vw;
+
+
+}
+
+.iimg {
+	display: inline-block;
+	width: 3.2vw;
+	margin-left: 0vw;
+	position: relative;
+	height: 3.2vw;
+}
+
+.title_span {
+	margin-left: -8vw;
+}
+
+.uploadBox {
+	float: right;
+	right: 4vw;
+	top: 12vh;
+	position: absolute;
+    width: 14vw;
+    height: 14vw;
+	z-index: 1;
+}
+
+.uploadBox:active {
+	transform: scale(0.8);
+
+}
+
+.zhiboBox {
+	float: right;
+	right: 4vw;
+	top: 2vh;
+	position: absolute;
+    width: 14vw;
+    height: 14vw;
+	z-index: 1;
+}
+.zhiboBox:active {
+	transform: scale(0.8);
+
+}

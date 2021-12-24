@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #398563;
+        color: white;
+      }
+      .header {
+        height: 13vh;
+        width: 100vw;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+      }
+      .headers {
+        margin-top: 10%;
+        width: 100vw;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+      }
+      .head_item {
+        width: 88.8vw;
+        display: flex;
+      }
+      .header_title {
+        width: 24vw;
+        height: 100%;
+        border: 1px solid white;
+        position: absolute;
+        right: 0%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+      }
+      .head_top {
+        height: 3.4vh;
+        z-index: 1;
+        position: relative;
+      }
+      .head_back {
+        height: 5vh;
+        position: relative;
+        z-index: 99;
+        margin-top: 0.5vh;
+      }
+
+      .lan_color {
+        color: white;
+      }
+      .language {
+        color: red;
+      }
+      .titleImg {
+        width: 100%;
+        height: 75%;
+      }
+      .head_bottom {
+        height: 9.2vh;
+        z-index: 0;
+        position: absolute;
+        bottom: -9vh;
+      }
+      .boxes {
+        height: 70vh;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        z-index: 0;
+      }
+      .box {
+        width: 88.8vw;
+        height: 100%;
+        position: relative;
+      }
+      .left_bar {
+        left: 0;
+      }
+      .bar {
+        width: 1.5vw;
+        height: 100%;
+        position: absolute;
+      }
+      .middle-box {
+        width: 88.8vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+      }
+      .box-content {
+        width: 100%;
+        height: 72%;
+      }
+      .img1 {
+        width: 35vw;
+        height: 23.2vw;
+        left: 28vw;
+        top: 24vh;
+        z-index: 1;
+      }
+      .img2 {
+        width: 35vw;
+        height: 23.2vw;
+        left: 0vw;
+        top: 13vh;
+        z-index: 2;
+      }
+      .img3 {
+        width: 35vw;
+        height: 23.2vw;
+        left: 56vw;
+        top: 35vh;
+        z-index: 1;
+      }
+      .english_but {
+        width: 24vw;
+        height: 100%;
+        border: 1px solid white;
+        position: absolute;
+        float: right;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vw;
+      }
+      .left_bar {
+        left: 0;
+      }
+      .bar {
+        width: 1.5vw;
+        height: 100%;
+        position: absolute;
+      }
+      .topBar {
+        position: absolute;
+        top: 4.3%;
+      }
+      .barBox {
+        width: 100%;
+        height: 35%;
+      }
+      .box-img {
+        position: absolute;
+      }
+      .buttomImg {
+        width: 40vw;
+        height: 25vh;
+        position: absolute;
+        bottom: 0;
+        float: right;
+        right: 0;
+        z-index: 0;
+      }
+      .headTile {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 3vw;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .headRow {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+      }
+      .rowleft {
+        width: 15%;
+
+        text-align: right;
+      }
+      .rowRight {
+        margin-left: 1%;
+
+        width: 85%;
+        text-align: left;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="header">
+      <div class="head_item head_back" style="z-index: 0"></div>
+      <!-- 中英文 -->
+      <div class="head_item head_top">
+        <div class="english_but">
+          <div class="lan_color language">中文</div>
+          /
+          <div class="lan_color">English</div>
+        </div>
+      </div>
+      <!-- 标题文字 -->
+      <div class="head_item head_bottom">
+        <img class="titleImg" src="./img/guojizhongwen.png" />
+      </div>
+    </div>
+    <!-- 中间盒子 -->
+    <div class="boxes">
+      <div class="box">
+        <div class="left_bar bar">
+          <div class="barBox topBar"></div>
+        </div>
+        <div class="middle-box">
+          <div class="box-content">
+            <img class="box-img img1" src="./img/huihua.png" />
+            <img class="box-img img2" src="./img/shipin.png" />
+            <img class="box-img img3" src="./img/shougong.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <img class="buttomImg" src="./img/right-bot.png" style="width: 172px" />
+    <div class="headers">
+      <div class="headTile">
+        <div class="headRow">
+          <div class="rowleft">主办:</div>
+          <div class="rowRight">四川新华出版发行集团、泰国孔敬大学孔子学院</div>
+        </div>
+        <div class="headRow">
+          <div class="rowleft">承办:</div>
+          <div class="rowRight">四川新华乐知教育科技有限公司</div>
+        </div>
+        <div class="headRow">
+          <div class="rowleft">协办:</div>
+          <div class="rowRight">新华-国际汉语文化交流中心（孔敬）</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

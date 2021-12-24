@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>熊猫与非遗</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="css/public.css" rel="stylesheet">
+    <style>
+
+        .box {
+            width: 14.4rem;
+            margin: 0 auto;
+            display: flex;
+            margin-top: 0.44rem;
+            /*align-items: center;*/
+            /*border: 1px solid red;*/
+        }
+
+        body {
+            width: 100%;
+            margin: auto;
+            overflow: auto;
+            overflow-x: hidden;
+            background-color: white;
+        }
+
+        .header {
+            width: 100%;
+            height: 1.99rem;
+            background-color: #27365f;
+            display: flex;
+        }
+
+        .logo > img {
+            position: absolute;
+            float: left;
+            width: 2.31rem;
+
+        }
+
+        .right-bot {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 2.92rem;
+        }
+
+        .logo_text {
+            width: 5.31rem;
+            height: 1.34rem;
+            background-image: url("img/res/logo-text.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .right-btn {
+            width: 1.442rem;
+            height: 1.19rem;
+            margin-left: 2.88rem;
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid darkred;*/
+            position: absolute;
+            right: 1.5rem;
+
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 0.24rem;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            width: 1.442rem;
+            font-size: 0.2rem;
+            height: 0.367rem;
+            line-height: 0.367rem;
+            align-self: flex-end;
+
+        }
+
+        .back {
+            width: 0.77rem;
+            height: 0.59rem;
+            margin-left: 0.67rem;
+            cursor: pointer;
+            /*border: 1px solid white;*/
+        }
+
+        .big {
+            width: 100%;
+            /*height: 680.3px;*/
+            /*border: 1px solid red;*/
+
+        }
+
+        .content {
+            width: 100%;
+            display: flex;
+            /*border: 1px solid white;*/
+        }
+
+        .left {
+            /*width: 4.82rem;*/
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid darkred;*/
+        }
+
+        .imgdiv {
+            width: 3.7rem;
+            margin-left: 0.7rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid white;*/
+        }
+
+        .unchoose {
+            cursor: pointer;
+            width: 3.7rem;
+            height: 0.92rem;
+            border-bottom: solid 1px #B5B5B5;
+            margin-bottom: 0.17rem;
+            display: flex;
+            /*justify-content: center;*/
+            align-items: center;
+        }
+
+        .unchoose > div {
+            color: #26355F;
+            font-size: 0.28rem;
+            text-align: left;
+            /*line-height: 0.27rem;*/
+
+        }
+
+        .clickstyle {
+            cursor: pointer;
+            color: #F5A418;
+
+        }
+
+        .clickstyle > div {
+            color: #F5A418;
+
+        }
+
+        .itemBox {
+            width: 100%;
+            /*height: 307.1px;*/
+            overflow-y: hidden;
+        }
+
+        .middle {
+            /*margin: 0px auto;*/
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid black;*/
+        }
+
+        .btn-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.56rem;
+            font-family: Source Han Serif CN;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        .middle > img {
+            /*border: 1px solid red;*/
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid red;*/
+            width: 10.00rem;
+            /*width: 55.5%;*/
+            /*margin-left: 4.4%;*/
+            margin: 0 auto;
+
+        }
+
+        .big_text {
+            overflow-y: scroll;
+            padding-top: 0.35rem;
+            /*border: 1px solid red;*/
+            text-align: justify;
+            display: flex;
+            /*justify-content: center;*/
+        }
+
+        .title {
+            width: 100%;
+            border-bottom: solid 1px #B5B5B5;
+            height: 0.55rem;
+            font-size: 0.28rem;
+            font-family: Source Han Sans CN;
+            font-weight: 800;
+            color: #1C6984;
+            line-height: 0.44;
+        }
+
+        .f-title {
+            font-size: 0.32rem;
+            font-family: Source Han Sans CN;
+            font-weight: 800;
+            color: black;
+            line-height: 0.74rem;
+            margin-top: 0.26rem;
+        }
+
+        .detail {
+            text-align: justify;
+        }
+
+        .detailEnglish {
+            line-height: 0.53rem;
+            text-align: justify;
+        }
+
+        .text-content {
+            text-align: left;
+            width: 10rem;
+            font-size: 0.22rem;
+            font-family: Source Han Sans CN;
+            font-weight: 400;
+            color: black;
+            line-height: 0.56rem;
+            /*border: 1px solid blue;*/
+
+        }
+
+        .English {
+            display: none;
+        }
+
+        .chinese {
+            display: block;
+        }
+
+        .close {
+            position: fixed;
+            z-index: 10001;
+            top: 10px;
+            right: 10px;
+            /*margin-right: 10px;*/
+            /*float: right;*/
+        }
+
+        .imgItem {
+            /*width: 500px;*/
+            width: 6.67rem;
+        }
+
+        .videoItem {
+            /*width: 500px;*/
+            width: 6.67rem;
+        }
+
+        .miaoshu {
+            margin-left: 2em;
+            font-size: 14px;
+            line-height: 24px;
+            color: #595959;
+        }
+
+    </style>
+</head>
+<body>
+<!--<div class="boxes">-->
+<div class="header">
+    <div class="logo">
+        <img src="img/index/left-logo.png" width="100%"/>
+    </div>
+    <div class="box" style="">
+
+        <div class="logo_text">
+
+        </div>
+        <div class="right-btn">
+
+            <img class="back clickEffict" onclick="backRes()" src="img/back.png" alt="">
+            <div class="btn clickEffict" onclick="change()">
+                <span id="ch_text" style="color:#f0a944;">中文</span> /<span
+                    id="en_text">
+                    English
+            </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="big">
+
+        <div class="content">
+
+            <div class="right">
+
+                <!--<div class="item-box">-->
+
+                <div class="big_text scrollbar">
+                    <div class="text-content" id="detail">
+                        <div class="English" id="English">
+                            <div class="title" id="E-title">Panda and the intangible cultural heritages</div>
+                            <div class="f-title" id="Ef-title">
+                            </div>
+                            <div class="detailEnglish" id="EnglishNote">
+                                <div style='width:100%; text-align:center;'>-1- Section of Bamboo</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/c80a67125285890811961680853/awaTbKjuY5gA.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/211209945285890811707586582/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span>Kumail Abbas is a senior panda fan who comes from Pakistan, and currently studying in Department of Horticulture, Sichuan Agricultural University. He heard about that in Sichuan there’s a kind of panda who “doesn’t eat any bamboo”. Let’s watch the video of his wonderful journey of finding the panda who “doesn’t eat any bamboo” in Daoming Bamboo Village, Sichuan.</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-2- Section of Lacquerware</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/c80a66f65285890811961680848/Z0SdaAHrzAoA.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/21129e775285890811707587782/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class='miaoshu'><span>Salina Adhikari comes from Nepal and is currently learning the finance in Sichuan Agricultural University. She is also a devoted panda fan who hopes to find an immortal panda. Let search the panda which felt “like lacquer & like glue”
+                                    in the Chengdu Lacquer Factory together with her.</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-3- Section of Oiled Paper Umbrella</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/3f02bf775285890811959491581/rCh3q6gSctUA.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2113b29c5285890811707589659/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span>Fariha Bareque Bindu (Yongle) comes from Bangladesh and is studying in Clinical Medicine Department, Southwest Medical University. She is looking for a kind of special prevent related to panda in order to congratulate her grandmother’s birthday.
+                                    Let’s enjoy in the journey of realizing this grateful dream of Yongle.
+                                           </span>
+                                </div>
+                                <br>
+
+                                <div style='width:100%; text-align:center;'>-4- Section of Tibetan & Qiang Embroidery
+                                </div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/2120e7ef5285890811707590915/5285890812568620839.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2120e7ef5285890811707590915/v.f100010.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span>Ivana, who comes from Serbia, is currently studying the Chinese language in the School of Overseas Education, Sichuan University.
+                                    She wants to make a special gift for the upcoming birthday of her sister on soon.
+                                    Let’s join in her tour of exploring Qiang Village for DIY of this special gift.
+                                           </span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-5- Section of Tie-dye</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/2120d3b15285890811707590494/5285890812567675955.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2120d3b15285890811707590494/v.f100010.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span>Duangsamorn Wattanapathitiwong, who comes from Thailand, is currently studying the ancient Chinese literary in the College of Literature and Journalism, Sichuan University.
+                                    She is a devotee of Chinese culture as well as the pandas. Let’s experiencing the tie-dye pandas in Zigong together with her!
+                                           </span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-6- Section of New Year Paintings</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/21128c6c5285890811707587303/5285890812569913746.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/21128c6c5285890811707587303/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>Nicola, who comes from France, is currently studying the Chinese language in the School of Overseas Education, Sichuan University. Both he and his girl friend like pandas, and hope to find an anniversary gift about pandas as an ornament in their new house into which they're about to move. Let's follow his steps to Mianzhu to take a look at what the gift is!
+</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-7- Section of Shu Embroidery</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/211319b95285890811707588378/5285890812567676488.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/211319b95285890811707588378/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>Choi Juno, who comes from South Korea, is currently studying the stomatology in Sichuan University. As a devotee of Han Chinese Clothing and pandas, he has a little dream of combining these two interests of him. How did he realize his dream? Let's have a look!</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-8- Section of Silver Filigree</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/2113990d5285890811707589050/5285890812567676237.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2113990d5285890811707589050/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>Ishida Junichi, who comes from Japan, is currently studying the clinical medicine in Sichuan University.
+                                    His mother is from Sichuan, China, so he feels close to pandas. Now he’s looking for a wedding gift that contains the elements of pandas for his sister.
+                                    What would it be?</span>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="chinese" id="chinese">
+                            <div class="title" id="title">熊猫与非遗</div>
+                            <div class="f-title" id="f-title"></div>
+                            <div class="detail" id="note">
+                                <div style='width:100%; text-align:center;'>-1- 竹艺篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/c80a67125285890811961680853/awaTbKjuY5gA.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/211209945285890811707586582/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>就读于四川农业大学园艺系的库马尔是一名来自巴基斯坦的资深熊猫粉丝，他听闻在四川道明竹艺村里有一种“不吃竹子”的熊猫，让我们来一起观赏他寻找“不吃竹子的熊猫”这场奇妙之旅。</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-2- 漆器篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/c80a66f65285890811961680848/Z0SdaAHrzAoA.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/21129e775285890811707587782/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+
+                                <div class='miaoshu'><span style='margin-left: 2em;'>来自尼泊尔的萨琳娜在四川农业大学学习金融学，同时她也是一名想找到一个永不腐朽的熊猫的狂热熊猫粉丝，让我们和她一起去到成都漆器厂探寻“如胶似漆”的熊猫吧。</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-3- 油纸伞篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/3f02bf775285890811959491581/rCh3q6gSctUA.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2113b29c5285890811707589659/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>来自孟加拉国的永乐就读于西南医科大学临床医学专业，她期望在自己奶奶生日那天可以送给奶奶一份特殊的“熊猫”礼物，让我们和永乐一起一起去到四川泸州去实现这份感恩的心愿吧。</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-4- 羌绣篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/2120e7ef5285890811707590915/5285890812568620839.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2120e7ef5285890811707590915/v.f100010.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>来自塞尔维亚的伊娃在四川大学海外教育学院学习汉语言，她想做一份特别的礼物送给快要过生日的妹妹，让我们跟随伊娃一起去羌寨diy这份特殊的礼物！</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-5-扎染篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/2120d3b15285890811707590494/5285890812567675955.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2120d3b15285890811707590494/v.f100010.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>来自泰国的王惜美在四川大学文学与新闻学院学习中国古代文学，她喜欢中国文化、喜欢熊猫，让我们和她一起去自贡体验传统扎染熊猫吧！</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-6- 年画篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/21128c6c5285890811707587303/5285890812569913746.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/21128c6c5285890811707587303/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>来自法国的尼古拉在四川大学海外教育学院学习汉语言专业，他和女朋友都喜欢熊猫，希望找到一个关于熊猫的周年纪念日礼物，作为装饰品放在即将入住的新房里面。让我们跟随他的脚步去绵竹看看，这个礼物是什么吧！</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-7- 蜀绣篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/211319b95285890811707588378/5285890812567676488.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/211319b95285890811707588378/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>来自韩国的崔凖澔在四川大学学习口腔医学，热爱汉服和熊猫的他有个小小的梦想，希望将汉服和熊猫做个结合。崔同学是如何实现梦想的呢？一起来看看吧！</span>
+                                </div>
+                                <br>
+                                <div style='width:100%; text-align:center;'>-8- 银花丝篇</div>
+                                <div style='width:100%; text-align:center;'>
+                                    <video controls
+                                           poster="http://1301325388.vod2.myqcloud.com/d7bf4224vodcq1301325388/2113990d5285890811707589050/5285890812567676237.jpg"
+                                           class='videoItem'>
+                                        <source src="http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/2113990d5285890811707589050/v.f100030.mp4"
+                                                type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class='miaoshu'><span style='margin-left: 2em;'>在四川大学临床医学学习的石田顺一来自日本，他的母亲是四川人，因此他对熊猫感到特别亲切。他正在寻找一份送给姐姐的结婚礼物，这份礼物一定要有熊猫元素！会是什么呢？</span>
+                                </div>
+                                <br>
+
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <img src="img/res/xiongmao.png" class="right-bot" alt="">
+</div>
+<!--</div>-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script>
+
+    function change() {
+        var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+        console.log(n);
+        if (n == "china") {
+            localStorage.setItem("language", 'english');
+            get();
+            console.log("English")
+
+        } else {
+            localStorage.setItem("language", 'china');
+            get();
+        }
+    }
+
+
+    function get() {
+        var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+        console.log(localStorage.getItem("language"));
+        if (n == 'english') {
+            $(".English").css({"display": "block"});
+            $(".chinese").css({"display": "none"});
+            $("#en_text").css({"color": "#f0a944"});
+            $("#ch_text").css({"color": "white"});
+            console.log("English")
+
+        } else {
+
+            $(".English").css({"display": "none"});
+            $(".chinese").css({"display": "block"});
+            $("#en_text").css({"color": "white"});
+            $("#ch_text").css({"color": "#f0a944"});
+            console.log("chinese")
+        }
+
+    }
+
+    get();
+    $(window).resize(function () {
+        setHtmlFontSize();
+    });
+
+    $(function () {
+        setHtmlFontSize();
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <link href="css/public.css" rel="stylesheet">
+    <title>上传作品</title>
+    <style>
+        .download {
+            width: 8rem;
+            height: 6.11rem;
+            border-radius: 0.4rem;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .textbox {
+            width: 100%;
+            margin: auto;
+        }
+
+        .down-text {
+            width: 6.36rem;
+            /*height: 3.5rem;*/
+            margin: 0 auto;
+            font-size: 0.16rem;
+            line-height: 0.28rem;
+            text-align: justify;
+            justify-content: center;
+            align-items: center;
+            /*overflow-y: scroll;*/
+        }
+
+        .down-btn > img {
+            width: 1.11rem;
+            height: 1.12rem;
+            cursor: pointer;
+        }
+        .fanhui1 {
+            position: relative;
+            cursor: pointer;
+            height: 0.74rem;
+
+        }
+
+        .fanhui1 > img {
+            position: absolute;
+            width: 0.72rem;
+            height: 0.74rem;
+            right: -0.01rem;
+            top: -0.01rem;
+        }
+
+        .fanhui2 {
+            position: relative;
+            cursor: pointer;
+            height: 0.59rem;
+
+        }
+
+        .fanhui2 > img {
+            position: absolute;
+            width: 0.77rem;
+            height: 0.59rem;
+            right: 0;
+            top: 0;
+        }
+
+        .choujiang {
+            position: absolute;
+            width: 1.38rem;
+            cursor: pointer;
+        }
+
+        .inputDiv {
+            width: 70%;
+            margin-left: 15%;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            margin-top: 0.13rem;
+            display: flex;
+
+        }
+
+        .inputDiv1 {
+            width: 70%;
+            margin-left: 15%;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            margin-top: 0.13rem;
+
+        }
+
+        .inputDiv1 > div {
+            margin-left: 25%;
+            width: 75%;
+            border-radius: 0.1rem;
+        }
+
+        .input {
+            width: 75%;
+            height: 0.4rem;
+            background-color: #dbdbdb;
+        }
+
+        .text {
+            font-size: 0.22rem;
+            width: 25%;
+            text-align: justify;
+        }
+
+        .ok {
+            width: 75%;
+            margin-left: 25%;
+            text-align: center;
+            height: 0.4rem;
+            background-color: #F5A418;
+            border-radius: 0.1rem;
+            color: white;
+            font-size: 0.22rem;
+            cursor: pointer;
+        }
+        .sumbit {
+            width: 75%;
+            margin-left: 25%;
+            text-align: center;
+            height: 0.4rem;
+            background-color: #dbdbdb;
+            border-radius: 0.1rem;
+            color: white;
+            font-size: 0.22rem;
+            /*cursor: pointer;*/
+            pointer-events: none;
+        }
+
+        .clickEffict:active {
+            transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+            -o-transform: scale(0.9);
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        .uploadbtn {
+            /*width: 120px;*/
+            /*height: 45px;*/
+            cursor: pointer;
+            width: 75%;
+            height: 0.4rem;
+            margin-top: 0.1rem;
+            background-color: #F5A418;
+            line-height: 0.4rem;
+            text-align: center;
+            color: #fff;
+            font-size: 0.22rem;
+            /*display: none;*/
+        }
+
+        .uploadbtn .file {
+            opacity: 0;
+            position: relative;
+            top: -0.4rem;
+            width: 100%;
+            /*height: 45px;*/
+            cursor: pointer;
+            border: 1px solid red;
+        }
+
+        .filename {
+            width: 70%;
+
+        }
+
+        .delete {
+            cursor: pointer;
+            width: 30%;
+            background-color: #F5A418;
+            border-radius: 0.1rem;
+            color: white;
+            font-size: 0.2rem;
+            text-align: center;
+        }
+
+        .filename {
+            display: flex;
+            visibility: hidden;
+
+        }
+
+        .progress {
+            background-color: #025272;
+            text-align: center;
+            color: #fff;
+            font-size: 0.2rem;
+            display: none;
+        }
+
+        .etext {
+            font-size: 0.15rem;
+            line-height: 0.22rem;
+        }
+
+        .note {
+            width: 65%;
+            margin-left: 35%;
+            font-size: 0.16rem;
+            margin-bottom: 0.1rem;
+            /*border: 1px solid red;*/
+
+        }
+
+        .note-text {
+            width: 100%;
+
+        }
+
+        .n-text {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 0.13rem;
+            line-height: 0.18rem;
+            height: 5.52rem;
+            overflow-y: scroll;
+        }
+
+        .videoUrl {
+            width: 70%;
+            font-size: 0.22rem;
+        }
+        .opacityBottom {
+            /*margin-top: 44px;*/
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 1);
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+
+        }
+        .right-btn {
+            position: absolute;
+            right: 150px;
+            width: 14px;
+            height: 12px;
+            /*margin-left: 2.88rem;*/
+            display: flex;
+            flex-direction: column;
+            /*border: 1px solid darkred;*/
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 24px;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            width: 144px;
+            font-size: 20px;
+            height:36.7px;
+            line-height: 36.7px;
+            align-self: flex-end;
+
+        }
+
+        .English {
+            display: none;
+        }
+
+        .chinese {
+            display: block;
+
+        }
+        .email{
+            font-size: 0.16rem;
+        }
+        .text-english {
+            font-size: 0.18rem;
+            width: 25%;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body onload="onload()" id="mybody" style="display:none">
+
+<div class="opacityBottom" id="luckDraw">
+    <div class="download">
+        <div id="inforBox">
+            <div class="fanhui1"><img class="close clickEffict" src="img/res/fanhui1.png" alt=""></div>
+            <div class="textbox">
+                <div class="down-text chinese">
+                        <span
+                                style="margin-left: 2em;">“我与中国的故事”诚挚邀请汉语学习者、中华文化爱好者，通过图片、视频等形式，展示自己与中文、与中国、与中华文化的故事。比如：背诵古诗、演唱中文歌曲、弹奏中国乐器等。我们将评选优秀作品进行线上展览，欢迎大家踊跃投稿！</span>
+                    <form autocomplete="off" class="myform">
+                        <div class="inputDiv">
+                            <div class="text">作品名称:</div>
+                            <input class="input name" type="text" name="name" id="name"  autocomplete="off" />
+
+                        </div>
+                        <div class="inputDiv">
+
+                            <div class="text">作&emsp;&emsp;者:</div>
+                            <input class="input author" type="text" name="author" id="author"  autocomplete="off" />
+                        </div>
+
+                        <div class="inputDiv">
+
+                            <div class="text">学&emsp;&emsp;校:</div>
+                            <input class="input school" type="text" name="school" id="school"  autocomplete="off" />
+                        </div>
+
+                        <div class="inputDiv">
+
+                            <div class="text">邮&emsp;&emsp;箱:</div>
+                            <input class="input email" type="email" name="email" id="email"  autocomplete="off"
+                                   placeholder="我们将把审核结果发送到您的邮箱" /><br>
+                        </div>
+                        <div class="note"><input type="checkbox" checked id="checkbox"/><label>我已阅读<span
+                                style="color: #f0a944; cursor: pointer;" onclick="note()"
+                                class="clickEffict">《参赛须知》</span></label>
+                        </div>
+
+
+                        <div class="inputDiv1">
+                            <div class="ok clickEffict uploadbtn" id="">选择上传<input class="file uploadFile"
+                                                                                   id="uploadFile" type="file" value="上传" accept="image/*,video/*" />
+                            </div>
+                            <div class="progress">上传进度: <span class="progress1">50%</span></div>
+                            <div class="filename"><input type="text" name="filename" class="videoUrl" id="videoUrl" />
+                                <div class="delete clickEffict" onclick="deleteVideo()">重新上传</div>
+                            </div>
+                        </div>
+                        <!--<input type="file"/>-->
+                        <div class="inputDiv">
+                            <div class="sumbit" onclick="submitInfor()">提交</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="down-text English etext" style="display: none">
+                        <span style="font-size: 0.15rem;line-height: 0.15rem;">All of you, the Chinese learners and Chinese culture devotees,
+                            are sincerely invited to participate in this online activity with the theme of “My Story with China”.
+                            You can share your stories concerned with Chinese, China and Chinese culture through small works in the forms of pictures, videos and etc.
+                            Your small works can be reciting ancient poems, singing Chinese songs, playing Chinese musical instruments, etc.
+                            We will select excellent works for online exhibition after collection and evaluation. Contributions are welcome!</span>
+                    <form autocomplete="off" class="myform">
+                        <div class="inputDiv">
+
+                            <div class="text-english">Work Name:</div>
+                            <input class="input name" type="text" name="name" id="name_english"
+                                   autocomplete="off" />
+
+                        </div>
+                        <div class="inputDiv">
+
+                            <div class="text-english">Author:</div>
+                            <input class="input author" type="text" name="author" id="author_english"
+                                   autocomplete="off" />
+                        </div>
+
+                        <div class="inputDiv">
+
+                            <div class="text-english">School:</div>
+                            <input class="input school" type="text" name="school" id="school_english"
+                                   autocomplete="off" />
+                        </div>
+
+                        <div class="inputDiv">
+
+                            <div class="text-english">Email:</div>
+                            <input class="input email" type="email" name="email" id="email_english"
+                                   autocomplete="off" placeholder="We will send the result to your email" />
+                        </div>
+                        <div class="note"><input type="checkbox" checked id="checkbox_english"/><label>I've read the <span
+                                style="color: #f0a944; cursor: pointer;" class="clickEffict"
+                                onclick="note()">"Terms
+                                        & Conditions" of paticipating</span></label>
+                        </div>
+
+
+                        <div class="inputDiv1">
+                            <div class="ok clickEffict uploadbtn">Upload<input class="file uploadFile" type="file"
+                                                                               value="上传" accept="image/*,video/*"/>
+                            </div>
+                            <div class="progress">Upload Progress:<span class="progress1">50%</span></div>
+                            <div class="filename"><input type="text" name="filename" class="videoUrl" id="videoUrl_english" />
+                                <div class="delete clickEffict" onclick="deleteVideo()">Resume Choose</div>
+                            </div>
+                        </div>
+                        <div class="inputDiv">
+                            <div class="sumbit" onclick="submitInfor()">Sumbit</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="note-text etext" style="display: none">
+            <div class="fanhui2"><img class="back clickEffict" onclick="backUpload()" src="img/back.png" alt="">
+            </div>
+            <div class="n-text">
+                <h3 style="text-align: center">参赛须知 <br>Terms & Conditions</h3><br>
+                参赛者面向学习中文、热爱中文、喜欢中华文化的外国友人。<br>
+                The participates are welcomed as the foreign friends who study Chinese, love Chinese or are
+                interested
+                in the culture of China.<br>
+                参赛者通过“2021 魅力汉语”官网报名，根据页面提示上传作品。<br>
+                The participates can register through the official website of “2021 Charming Chinese”, and follow
+                the
+                tips to submit works.<br>
+                参赛作品可以是图片，也可以是视频，视频需控制在10分钟以内。<br>
+                The works can be pictures or videos, and the videos should be controlled within 10 minutes.<br>
+                作品内容和形式应遵守中国法律法规和相关政策，不得违背社会道德、公序良俗。作品内容和形式不得出现色情、暴力、反动、侵犯他人隐私及不宜公开传播的内容。<br>
+                The contents and forms of the works shall comply with Chinese laws and regulations and relevant
+                policies, and shall not violate social morality,
+                public order and good customs. The contents and forms of the works shall not include pornography,
+                violence, reactionaries, invasion of other people's privacy and other contents that are not
+                permitted
+                for public dissemination.<br>
+                如参赛者上传之参赛作品，因侵权或其他原因导致第三方向主办方主张权利，主办方有权在不事先通知内容上传者的情况下采取删除、屏蔽、断开链接等必要措施，新华乐知不承担任何因此产生的相关责任。<br>
+                If a third party claims rights to the organizer due to infringement or other reasons,
+                the organizer shall have the right to take necessary measures such as deleting, blocking and
+                disconnecting the link without prior notice to the content providers.
+                And, Sichuan Xinhua Lezhi Educational Technology Co., Ltd., the consulting company of this activity,
+                shall not assume any responsibility arising therefrom.<br>
+                作品涉及的名誉权、著作权、肖像权等法律问题，均由内容提供者自行承担，主办方有权将内容重复使用于宣传为目的的出版、发表、展览、演示等用途。<br>
+                The copyright, reputation, portrait and other legal issues involved in the works are assumed by the
+                content providers themselves,
+                and the organizers have the right to reuse the contents for publication, publishing, exhibition,
+                demonstration and other applications within the purpose of publicity.<br>
+                本次活动最终解释权归主办方所有。<br>
+                The final interpretation right of this activity belongs to the organizer.<br>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/config.js"></script>
+<script src="//imgcache.qq.com/open/qcloud/js/vod/sdk/ugcUploader.js"></script>
+<script src="https://cdn-go.cn/cdn/vod-js-sdk-v6/latest/vod-js-sdk-v6.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+
+<script>
+    var videoPath;
+    function getSignature() {
+        return axios.post('http://api.ec.lz06.com/sing/api/sign.php', JSON.stringify({
+            "Action": "GetUgcUploadSign"
+        })).then(function (response) {
+            return response.data.data.signature
+        })
+    };
+
+    /**
+     * 示例1：直接上传视频
+     **/
+    $('.uploadFile').on('change', function (e) {
+        console.log("开始上传");
+        var mediaFile = this.files[0];
+        const tcVod = new TcVod.default({
+            getSignature: getSignature
+        });
+
+        const uploader = tcVod.upload({
+            mediaFile: mediaFile,
+        });
+
+        uploader.on('media_progress', function (info) {
+            console.log(info.percent);
+            console.log("上传中", info.percent);
+            $(".uploadbtn").css("display", "none");
+            $(".progress").css("display", "block");
+            $(".progress1").html("0%");
+            if (info.percent > 0) {
+                $(".progress1").html(Math.floor(info.percent * 100) + '%');
+            }
+            console.log(Math.floor(info.percent * 100))
+        });
+
+        uploader.done().then(function (doneResult) {
+            // deal with doneResult
+            console.log(doneResult);
+            videoPath = doneResult.video.url;
+            fileId = doneResult.fileId;
+            $(".videoUrl ").val(mediaFile.name);
+            $(".progress").css("display", "none");
+            $(".filename").css("visibility", "visible");
+            $(".sumbit").css("background-color", "#F5A418");
+            $(".sumbit").css("pointer-events", "auto");
+        }).catch(function (err) {
+            // deal with error
+            console.log(err);
+        })
+
+    });
+
+
+    //删除
+    function deleteVideo() {
+        $('.videoUrl').val("");
+        $(".uploadbtn").css("display", "block");
+        $(".filename").css("visibility", "hidden");
+
+
+    }
+
+
+
+    //返回上传界面
+    function backUpload() {
+        $("#inforBox").show();
+        $(".note-text").hide();
+    }
+
+    //显示参赛须知
+    function note() {
+        $("#inforBox").hide();
+        $(".note-text").show();
+    }
+    //删除
+    function deleteVideo() {
+        $('.videoUrl').val("");
+        $(".uploadbtn").css("display", "block");
+        $(".filename").css("visibility", "hidden");
+
+
+    }
+
+    function submitInfor() {
+
+
+        var title = $('#name').val();
+        var author = $('#author').val();
+        var videoUrl = videoPath;
+        var videoname = $('#videoUrl').val();
+        var school = $('#school').val();
+        var email = $('#email').val();
+        var  check = $('#checkbox').is(':checked');
+        var myReg = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+
+
+        var language = localStorage.getItem("language");
+        console.log(language);
+
+        if (language == "english") {
+            title = $('#name_english').val();
+            author = $('#author_english').val();
+            videoUrl = videoPath;
+            videoname = $('#videoUrl_english').val();
+            school = $('#school_english').val();
+            email = $('#email_english').val();
+            check = $('#checkbox_english').is(':checked');
+        }
+
+        if (title == "") {
+            alert("请输入作品名称" + "\n" +
+                "Please input the name of your work.");
+            return false;
+        }
+        else if (author == "") {
+            alert("请输入作者" + "\n" +
+                "Please input the author");
+            return false;
+        }
+        else if (school == "") {
+            alert("请输入学校" + "\n" +
+                "Please input your school");
+            return false;
+        }
+        else if (!myReg.test(email)) {
+            alert("请输入正确的邮箱格式 " + "\n" +
+                "Please input the correct Email format");
+            return false;
+        }
+        else if (check == false) {
+            alert("请阅读《参赛须知》" + "\n" +
+                "Please read the \"Terms & Conditions\"");
+            return false;
+        }
+        else if (videoname == "") {
+            alert("请选择文件上传" + "\n" +
+                "Please choose the file to upload");
+            return false;
+        }
+
+
+        else {
+            $(".sumbit").css("pointer-events", "none");
+            $.ajax({
+                type: "post",
+                url: 'http://api.ec.lz06.com/sing/api/user.php',
+                data: {
+                    "action": "uploadVideo",
+                    "title": title,
+                    "author": author,
+                    "email": email,
+                    "videoUrl": videoUrl,
+                    "school": school,
+                    "userId": "",
+                    "fileId": fileId,
+                    "projectId":8
+
+                },
+                dataType: 'json',
+                success: function (dat) {
+                    if (dat.code==0){
+                        alert("恭喜您成功上传作品，作品将进行审核与筛选，审核结果通过邮件发送到您的邮箱。" + "\n" + "Congratulations on successful upload of your participating works. " +
+                            "The works will be reviewed and screened for evaluations, and the evaluating results will be sent to your email.");
+                        // $(".myform").find('input[type=text],input[type=email]').each(function() {
+                        //     $(this).val('');
+                        // });
+                        location.reload();
+                    }
+                    else {
+                        alert("上传失败");
+                    }
+                    $(".sumbit").css("pointer-events", "auto");
+                    return false;
+                },
+                error: function (e, a, b) {
+                    alert("上传失败");
+                    console.log(e);
+                    console.log(a);
+                    console.log(b);
+                }
+            });
+        }
+    }
+
+
+    function get() {
+        var n = (localStorage.getItem("language") == null) ? "china" : localStorage.getItem("language");
+        console.log(localStorage.getItem("language"));
+        if (n == 'english') {
+            $(".English").css({"display": "block"});
+            $(".chinese").css({"display": "none"});
+            $("#en_text").css({"color": "#f0a944"});
+            $("#ch_text").css({"color": "white"});
+            console.log("English")
+
+        } else {
+
+            $(".English").css({"display": "none"});
+            $(".chinese").css({"display": "block"});
+            $("#en_text").css({"color": "white"});
+            $("#ch_text").css({"color": "#f0a944"});
+            console.log("chinese")
+        }
+
+    }
+
+    get();
+    //关闭弹窗
+
+    $('.close').click(function () {
+        history.back(-1);
+
+    });
+    // get();
+    $(window).resize(function () {
+        setHtmlFontSize();
+    });
+
+    $(function () {
+        setHtmlFontSize();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+{
+  "name": "欢乐中国年",
+  "page": {
+    "0": {
+      "cover": {
+        "url": "static/img/cover.png",
+        "width": "537px",
+        "p": {
+          "x": 0,
+          "y": 0
+        }
+      },
+      "layer": {
+        "0": {
+          "yun": {
+            "0": "static/img/cloud_one.png"
+          },
+          "zIndex": 1,
+          "thing": {}
+        },
+        "1": {
+          "yun": {
+            "0": "static/img/cloud_two.png"
+          },
+          "zIndex": 2,
+          "thing": {
+            "0": {
+              "name": "正月初一",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c2b6ad5285890812839507062/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c2b6ad5285890812839507062/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "455px",
+              "y": "56px"
+            },
+            "1": {
+              "name": "正月初二",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c24c325285890812839506851/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c24c325285890812839506851/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "1148px",
+              "y": "99px"
+            },
+            "2": {
+              "name": "正月初三",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d1afc95285890812840940632/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d1afc95285890812840940632/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "1859px",
+              "y": "135px"
+            },
+            "3": {
+              "name": "正月初四",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d1b0315285890812840940667/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d1b0315285890812840940667/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "2572px",
+              "y": "102px"
+            },
+            "4": {
+              "name": "正月初五",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c2b60e5285890812839507018/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c2b60e5285890812839507018/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "3264px",
+              "y": "56px"
+            },
+            "5": {
+              "name": "正月初六",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d1ac545285890812840940598/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d1ac545285890812840940598/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "3964px",
+              "y": "156px"
+            },
+            "6": {
+              "name": "年夜饭",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d19f8a5285890812840940291/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d19f8a5285890812840940291/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "4664px",
+              "y": "89px"
+            },
+            "7": {
+              "name": "门神",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d19e895285890812840940218/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d19e895285890812840940218/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "5364px",
+              "y": "76px"
+            },
+            "8": {
+              "name": "财神",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d19a675285890812840940126/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/38d19a675285890812840940126/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "6164px",
+              "y": "105px"
+            },
+            "9": {
+              "name": "春节",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c23b765285890812839506477/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c23b765285890812839506477/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "6896px",
+              "y": "46px"
+            },
+            "10": {
+              "name": "正月十五",
+              "type": 1,
+              "school": "",
+              "desc": "",
+              "cover": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c2ba2f5285890812839507109/coverBySnapshot_10_0.jpg",
+              "src": "http://1301325388.vod2.myqcloud.com/aea92fccvodtranscq1301325388/f7c2ba2f5285890812839507109/v.f100030.mp4",
+              "w": "640px",
+              "h": "360px",
+              "x": "7664px",
+              "y": "86px"
+            }
+          }
+        },
+        "2": {
+          "yun": {
+            "0": "static/img/cloud_three.png"
+          },
+          "zIndex": 3,
+          "thing": {}
+        }
+      }
+    }
+  }
+}

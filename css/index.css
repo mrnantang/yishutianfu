@@ -1,0 +1,201 @@
+.box {
+    width: 14.4rem;
+    margin: 0 auto;
+    display: flex;
+}
+
+body {
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #45A279;
+    /*border: 1px solid white;*/
+    background-image: url(../img/index/beijingwangxian.png);
+}
+
+.header {
+    width: 100%;
+    height: 1.99rem;
+    /*border: 1px solid white;*/
+    background-color: #398563;
+    display: flex;
+}
+
+.logo>img {
+    position: absolute;
+    float: left;
+    width: 1.5rem;
+    margin-top:0.3rem;
+}
+
+.left-bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 7rem;
+    z-index: -1;
+}
+
+.right-bot {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 5rem;
+    z-index: -1;
+}
+
+.logo_text {
+    width: 9.55rem;
+    height: 1.33rem;
+    /*border: 1px solid white;*/
+    align-self: flex-end;
+    /* background-image: url("img/index/logo-text.png"); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    margin-top: 0;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 10vw;
+    font-size: 12px;
+    height: 0.367rem;
+    line-height: 0.367rem;
+}
+
+.btn1 {
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    margin-top: 0.49rem;
+    /*margin-left: 11.5rem;*/
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+    width: 1.442rem;
+    font-size: 0.2rem;
+    height: 0.367rem;
+    line-height: 0.367rem;
+}
+
+.big {
+    width: 100%;
+}
+
+.null {
+    width: 100%;
+    /*height: 58px;*/
+    height: 0.63rem;
+    /*border: 1px solid white;*/
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    position: relative;
+    /*height: 668px;*/
+    /*border: 1px solid white;*/
+}
+.left {
+    margin-top: 0.25rem;
+    margin-left: 2.8rem;
+    width: 6.69rem;
+    display: flex;
+}
+
+.left>a {
+    width: 3.20rem;
+    height: 2.11rem;
+    /*border: 1px solid white;*/
+}
+
+.left>a>img {
+    width: 3.51rem;
+    height: 2.38rem;
+    /*border: 1px solid white;*/
+}
+
+.left-m {
+    margin-top: 2.8rem;
+    margin-left: -1rem;
+}
+.left-banj{
+    width: 5vw;
+    height: 5vh;
+    margin-top: -3%;
+    margin-left: 29%;
+}
+.left-banj > img {
+    width: 300%;
+}
+.left-bg{
+    margin-left: -1rem; 
+}
+.text-content {
+    margin-left: 0.53rem;
+    width: 4.56rem;
+    height: 2.71rem;
+    line-height: 0.36rem;
+    font-size: 0.18rem;
+    font-family: Source Han Sans CN;
+    font-weight: 400;
+    color: #FFFFFF;
+    display: flex;
+}
+
+.English {
+    display: none;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.chinese {
+    display: block;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.container {
+    border: 1px solid white
+}
+
+.bot {
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.18rem;
+    color: white;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    bottom: 0;
+}
+
+.bot>div {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.down-text {
+    overflow-y: scroll;
+    height: 50vh;
+}
